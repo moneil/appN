@@ -1,8 +1,8 @@
 {
-  "name": "nodeserver",
+  "name": "app2",
   "version": "1.0.0",
   "description": "node-static server for testing",
-  "main": "/var/www/nodeserver/html/index.js",
+  "main": "app.js",
   "dependencies": {
     "angular-translate": "^2.15.2",
     "bower": "^1.8.0",
@@ -35,20 +35,20 @@
     "sinon": "^1.17.7"
   },
   "scripts": {
-    "start": "node ./bin/www nodeserver",
-    "stop": "killall -SIGINT nodeserver",
+    "start": "node ./app.js app2",
+    "stop": "killall -SIGINT app2",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moneil/nodeservertest.git"
+    "url": "git+https://github.com/moneil/app2.git"
   },
   "author": "moneil",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/moneil/nodeservertest/issues"
+    "url": "https://github.com/moneil/app2/issues"
   },
-  "homepage": "https://github.com/moneil/nodeservertest#readme",
+  "homepage": "https://github.com/moneil/app2#readme",
   "keywords": [],
   "directories": {
     "test": "test"
