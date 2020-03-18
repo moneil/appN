@@ -3,7 +3,6 @@
   "verbose": true,
   "ignore": [
 
-    "$HOME/public",
     "$HOME/test",
     "$HOME/node_modules",
     "$HOME/bower_components",
@@ -11,7 +10,7 @@
 
   ],
   "execMap": {
-    "js": "DEBUG=nodeserver:* npm start"
+    "js": "DEBUG=app2:* npm start"
   },
   "events": {
     "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
