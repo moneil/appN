@@ -1,0 +1,20 @@
+{
+  "name": "app2",
+  "description": "Demo app2.",
+  "main": "/bin/www",
+  "authors": [
+    "Scott Hurrey <Scott.Hurrey@blackboard.com>",
+    "Mark O'Neil <Mark.ONeil@blackboard.com"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
