@@ -1,0 +1,25 @@
+#!/bin/bash
+TARGET="/opt/app2"
+GIT_DIR="/opt/git/app2.git"
+BRANCH="master"
+
+while read oldrev newrev ref
+do
+	# only checking out the master (or whatever branch you would like to deploy)
+	if [ "$ref" = "refs/heads/$BRANCH" ];
+	then
+		echo "Ref $ref received. Deploying ${BRANCH} branch to production..."
+		git --work-tree=$TARGET --git-dir=$GIT_DIR checkout -f $BRANCH
+	else
+		echo "Ref $ref received. Doing nothing: only the ${BRANCH} branch may be deployed on this server."
+	fi
+done
+
+#restart target
+cd $TARGET
+echo "----stopping app2"
+pm2 stop app.js --name app2 > /dev/null 2>&1
+echo "----installing  app2"
+sudo npm install > /dev/null 2>&1
+echo "----restarting app2"
+pm2 start app.js --name app2
