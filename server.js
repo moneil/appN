@@ -1,4 +1,4 @@
-//server.js
+//server.js v1.0.0
 const config = require ('./config.json');
 
 var http = require('http');

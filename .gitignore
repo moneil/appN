@@ -1,6 +1,8 @@
 .DS_Store
 
-#node modules
+#node
 node_modules/
+package-lock.json
 
+#visual code
 *.code-workspace
