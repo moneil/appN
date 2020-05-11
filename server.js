@@ -1,5 +1,4 @@
 //server.js
-const _ = require ('lodash');
 const config = require ('./config.json');
 
 var http = require('http');
