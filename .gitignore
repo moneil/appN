@@ -3,4 +3,4 @@
 #node modules
 node_modules/
 
-DemoDelivery.code-workspace
+*.code-workspace

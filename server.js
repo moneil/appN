@@ -17,7 +17,7 @@ var server = http.createServer(function(request, response) {
     response.writeHead(200, {'Content-Type': 'text/plain'});
     response.end(version);
   } else if (parts.pathname.startsWith('/app2')) {
-    responseText += name + " v" + version + " via hostname/containerId: " + containerId + "\n\n";
+    responseText += name + " v" + version + "\n\n";
     responseText += "Full passed URL: '" + request.url + "'";
 
     response.writeHead(200, {'Content-Type': 'text/plain'});
