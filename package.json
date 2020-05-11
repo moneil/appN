@@ -1,19 +1,22 @@
 {
-  "name": "_APP_4",
+  "name": "_APP_N",
   "version": "1.0.0",
   "description": "node-static server for testing",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moneil/_APP_4.git"
+    "url": "git+https://github.com/moneil/appn.git"
   },
   "author": "moneil",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/moneil/_APP_4/issues"
+    "url": "https://github.com/moneil/appn/issues"
   },
-  "homepage": "https://github.com/moneil/_APP_4#readme"
+  "homepage": "https://github.com/moneil/appn#readme"
 }
