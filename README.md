@@ -32,5 +32,11 @@ or use environment variables.
 3. Start appN using 
 `$ npm start`
 
+## Docker
+
+`$ docker run --env APP_NAME=_APP_007 --env APP_PATH=/a7 --env APP_VERSION_PATH=/a7/weebles --env APP_VERSION=7 -p 80:8080 blackboardhub.ddns.net/bbdn/appn:1.0`
+
+or edit ENVIRONMENT section in docker-compose.yml and `$ docker-compose up -d`
+
 
 

@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+    APP1:
+        container_name: DOCKER_DEMO_APP_1
+        image: blackboardhub.ddns.net/bbdn/appn:1.0
+        ports:
+            - 80:8080
+        # keep it running unless you explicitly stop it
+        restart: unless-stopped
+        environment:
+            - APP_NAME=_APP_007 
+            - APP_PATH=/a7 
+            - APP_VERSION_PATH=/a7/weebles 
+            - APP_VERSION=7 -p 80:8080 blackboardhub.ddns.net/bbdn/appn:1.0
+        command:  npm start
