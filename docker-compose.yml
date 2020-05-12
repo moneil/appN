@@ -4,8 +4,11 @@ services:
     APP1:
         container_name: DOCKER_DEMO_APP_1
         image: blackboardhub.ddns.net/bbdn/appn:1.0
+        # Note the ports format is host:container - you may have many containers which use the same container port (e.g.:8080), but you can have only one use per host port (e.g. only one 80, only one 81, etc.)
+        # Use the below ports setting if exposing service on specific ports.  # If exposing service in a Swarm or using reverse proxy then only provide the container portion as shown below.
         ports:
-            - 80:8080
+            - 80:8080 # specific host:container port
+            # - 8080 # Docker provides host port, container access based on service name e.g.: https://<service name>/... https://APP1/...
         networks:
             - skynet
         deploy:
@@ -14,8 +17,9 @@ services:
               parallelism: 2
               delay: 10s
             restart_policy:
-                condition: on-failure    placement:
-            constraints: [node.role == worker]
+                condition: on-failure    
+            placement:
+                constraints: [node.role == worker]
         # keep it running unless you explicitly stop it
         restart: unless-stopped
         environment:
