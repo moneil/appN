@@ -38,7 +38,7 @@ or use environment variables.
 
 or edit ENVIRONMENT section in docker-compose.yml and `$ docker-compose up -d`
 
-> Note: the docker-compose.yml file is suitable for deploying multiple appN instances - simply copy/paste the provided service example and edit the service name, host port, and environment variables. 
+> Note: the docker-compose.yml file is suitable for deploying multiple appN instances - simply copy/paste the provided service example and edit the service name, host port, and environment variables to create a unique service description.
 > 
 > If you are fronting with a reverse proxy then be sure to also change the port settings per service as described in the file comments.
 > 
