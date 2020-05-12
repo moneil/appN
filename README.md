@@ -1,6 +1,6 @@
 # AppN
 
-May 11, 2020
+May 12, 2020
 
 AppN is a very basic node.js application used in scenarios where deploying serveral applications is useful - it is small lightweight, customizeable, and meets the needs of having a quickly deployable application to test various scenarios such as reverse proxy or cases where multiple applications are useful. 
 
