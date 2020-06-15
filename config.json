@@ -2,5 +2,6 @@
     "app_name": "_APP_N",
     "app_version": "1.0",
     "app_path": "/app1",
-    "app_version_path": "/app1/version"
+    "app_version_path": "/app1/version",
+    "app_port": "6100"
 }

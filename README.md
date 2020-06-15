@@ -29,7 +29,10 @@ or use environment variables.
 	
 	`$ export APP_VERSION_PATH="/app1/version"`
 
+	`$export APP_PORT="6100"`
+
 3. Start appN using 
+`$ npm install`
 `$ npm start`
 
 ## Docker

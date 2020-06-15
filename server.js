@@ -12,11 +12,13 @@ config.app_name = process.env.APP_NAME?process.env.APP_NAME:config.app_name;
 config.app_version = process.env.APP_VERSION?process.env.APP_VERSION:config.app_version;
 config.app_path = process.env.APP_PATH?process.env.APP_PATH:config.app_path;
 config.app_version_path = process.env.APP_VERSION_PATH?process.env.APP_VERSION_PATH:config.app_version_path;
+config.app_port = process.env.APP_PORT?process.env.APP_PORT:config.app_port;
 
 let app_name = config.app_name;
 let version = config.app_version;
 let appPath = config.app_path;
 let versionPath = config.app_version_path;
+let appPort = config.app_port;
 
 console.log(`config: ${JSON.stringify(config, undefined, config.json_indentation)}`);
 
@@ -40,4 +42,4 @@ var server = http.createServer(function(request, response) {
   }
 });   
 
-server.listen(8080);
+server.listen(appPort);
