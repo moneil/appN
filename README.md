@@ -33,9 +33,9 @@ or use environment variables.
 
 3. Start appN using 
 
-`$ npm install`
+	`$ npm install`
 
-`$ npm start`
+	`$ npm start`
 
 ## Docker
 
