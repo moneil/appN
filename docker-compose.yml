@@ -27,7 +27,7 @@ services:
             - APP_PATH=/a7 
             - APP_VERSION_PATH=/a7/weebles 
             - APP_VERSION=7
-            = APP_PORT=6100
+            - APP_PORT=6100
         command:  npm start
 
 networks:
