@@ -39,7 +39,7 @@ or use environment variables.
 
 ## Docker
 
-`$ docker run --env APP_NAME=_APP_007 --env APP_PATH=/a7 --env APP_VERSION_PATH=/a7/weebles --env APP_VERSION=7 --env APP_PORT=6100 -p 80:6100 blackboardhub.ddns.net/bbdn/appn:1.0`
+`$ docker run --env APP_NAME=_APP_007 --env APP_PATH=/a7 --env APP_VERSION_PATH=/a7/weebles --env APP_VERSION=7 --env APP_PORT=6100 -p 80:6100 blackboardhub.ddns.net/bbdn/appn:1.5`
 
 or edit ENVIRONMENT section in docker-compose.yml and `$ docker-compose up -d`
 
