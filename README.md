@@ -49,5 +49,13 @@ or edit ENVIRONMENT section in docker-compose.yml and `$ docker-compose up -d`
 > 
 > The compose file is also suitable for deploying in a Docker Swarm.  
 
+Consistency in values...
+
+1. Make certain you are consistent across configuratoin files re ports and app names
+
+2. Make certain that networking reflects the network you are using e.g.: dockerdemo_skynet etc.
+
+
+
 
 
