@@ -6,11 +6,12 @@ services:
         image: blackboardhub.ddns.net/bbdn/appn:1.5
         # Note the ports format is host:container - you may have many containers which use the same container port (e.g.:8080), but you can have only one use per host port (e.g. only one 80, only one 81, etc.)
         # Use the below ports setting if exposing service on specific ports.  # If exposing service in a Swarm or using reverse proxy then only provide the container portion as shown below.
-        ports:
-            - 80:6100 # specific host:container port
-            # - 6100 # Docker provides host port, container access based on service name e.g.: https://<service name>/... https://APP1/...
-        networks:
-            - skynet
+        ports: #use ports when standalone - otherwise comment out this and the e next line and uncomment the  'export:' block
+            - 80:6100 # specific host:container port - do not use with export 
+        #export:
+            # - 6100 # Docker provides host port, container port specified in app config. proxied container access based on service name e.g.: https://<service name:port>/... https://APP1:6100/...
+        networks: #use only if not joining an existing network - see below network section. 
+            - skynet #you'll want this to be the same as your nginx network.
         deploy:
             replicas: 2
             update_config:
@@ -20,15 +21,18 @@ services:
                 condition: on-failure    
             placement:
                 constraints: [node.role == worker]
-        # keep it running unless you explicitly stop it
-        restart: unless-stopped
+        restart: unless-stopped # keep it running unless you explicitly stop it
         environment:
-            - APP_NAME=_APP_007 
+            - APP_NAME=_APP_007
             - APP_PATH=/a7 
             - APP_VERSION_PATH=/a7/weebles 
             - APP_VERSION=7
-            - APP_PORT=6100
+            - APP_PORT=6100 #should be above container port
         command:  npm start
 
 networks:
-    skynet:
+    skynet: #match above if not using an existing shared network
+    # if proxy and shared network then comment the above line and uncomment the below block
+    #default:
+    #  external:
+    #    name: dockerdemo_skynet #created manually via docker network create dockerdemo_skynet or in a compose.yaml doc like here.
